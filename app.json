@@ -7,7 +7,6 @@
   ],
   "environments": {
     "test": {
-      "env": { "REDIS_VERSION": "7" },
       "addons": ["heroku-redis:in-dyno"]
     }
   }
