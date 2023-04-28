@@ -1,5 +1,14 @@
 {
+  "buildpacks": [
+    { "url": "heroku/nodejs" }
+  ],
   "addons": [
-    "heroku-redis"
-  ]
+    "heroku-redis:mini"
+  ],
+  "environments": {
+    "test": {
+      "env": { "REDIS_VERSION": "7.0" },
+      "addons": ["heroku-redis:in-dyno"]
+    }
+  }
 }
